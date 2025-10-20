@@ -1,10 +1,10 @@
-name: 'airbyte_dbt_transformations'
+name: 'beacon_airbyte_dbt_transformations'
 version: '1.0'
 config-version: 2
 
 profile: 'airbyte'
 
 models:
-  airbyte_dbt_transformations:
+  beacon_airbyte_dbt_transformations:
     +schema: analytics
     +materialized: view
