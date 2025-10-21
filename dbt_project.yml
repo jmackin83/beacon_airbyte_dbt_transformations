@@ -1,8 +1,8 @@
-name: 'beacon_airbyte_dbt_transformations'
-version: '1.0'
+name: beacon_airbyte_dbt_transformations
+version: "1.0"
 config-version: 2
 
-profile: 'airbyte'
+profile: airbyte
 
 models:
   beacon_airbyte_dbt_transformations:
