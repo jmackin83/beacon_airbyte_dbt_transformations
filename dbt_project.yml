@@ -6,5 +6,5 @@ profile: airbyte
 
 models:
   beacon_airbyte_dbt_transformations:
-    +schema: analytics
+    +schema: public
     +materialized: view
