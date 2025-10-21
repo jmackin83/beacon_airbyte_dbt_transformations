@@ -1,6 +1,7 @@
 {{ config(
     materialized='view',
-    schema='analytics'
+    schema='analytics',
+    alias='active_listings'
 ) }}
 
 SELECT
@@ -10,7 +11,7 @@ SELECT
     (l.property -> 'address') ->> 'state'       AS state,
     (l.property -> 'address') ->> 'postal_code' AS postal_code,
     (l.property -> 'address') ->> 'country'     AS country,
-    l.property ->> 'price'                      AS price,
+    (l.property ->> 'price')::numeric           AS price,
     l.created_by_id,
     l.created_at,
     (l.created_at::timestamptz AT TIME ZONE 'America/New_York') AS created_at_est,
