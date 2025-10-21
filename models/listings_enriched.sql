@@ -1,6 +1,6 @@
 {{ config(
     materialized='view',
-    schema='analytics'
+    schema='public'
 ) }}
 
 SELECT
